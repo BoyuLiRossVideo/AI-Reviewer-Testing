@@ -5,7 +5,9 @@ on:
     types:
       - opened
       - synchronize
+
 permissions: write-all
+
 jobs:
   review:
     runs-on: ubuntu-latest
@@ -14,7 +16,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: AI Code Reviewer
-        uses: BoyuLiRossVideo/ai-code-reviewer@main
+        uses: BoyuLiRossVideo/AI-Reviewer-Testing@main
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
